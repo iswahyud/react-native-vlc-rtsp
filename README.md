@@ -59,15 +59,10 @@ Should work without any specific settings, but make sure your RN project has ins
 	- Debug Information Format = `DWARF`
   ![](./images/2.png)
 
-9. in XCode, select project folder > Build Settings > Search Path
-	- Library Search Path (Debug & release)
-  add this:
-
-  - `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios/RCTVLCPlayer/vlcKit`
-
-	- `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios`
-
-  - `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios/RCTVLCPlayer/vlcKit/MobileVLCKit.framework`
+9. in XCode, select project folder > Build Settings > Search Path > Library Search Path (Debug & release) then add this:
+    - `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios/RCTVLCPlayer/vlcKit`
+    - `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios`
+    - `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios/RCTVLCPlayer/vlcKit/MobileVLCKit.framework`
 
 
 ## How to Use
@@ -167,5 +162,5 @@ Video coding formats: Cinepak, Dirac, DV, H.263, H.264/MPEG-4 AVC, H.265/MPEG HE
 
 ## author
 
-Iswahyudi > [Visit Google Developer Profile](https://g.dev/yudi)
+Iswahyudi - [[Google Developer Profile](https://g.dev/yudi)]
 
