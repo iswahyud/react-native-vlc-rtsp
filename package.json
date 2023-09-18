@@ -1,0 +1,29 @@
+{
+  "name": "react-native-vlc-rtsp",
+  "version": "1.0.1",
+  "description": "Library for Real-Time Video Stream RTSP in React Native. with new update: Support on Android and iOS (also bahasa version)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vlc",
+    "player",
+    "android",
+    "ios",
+    "react-native",
+    "mp4"
+  ],
+  "author": "iswahyudi",
+  "email": "iswah96yudi@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iswahyud/react-native-vlc-rtsp.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iswahyud/react-native-vlc-rtsp/issues"
+  },
+  "homepage": "https://github.com/iswahyud/react-native-vlc-rtsp#readme",
+  "preferGlobal": true
+}
