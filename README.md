@@ -52,7 +52,7 @@ Should work without any specific settings, but make sure your RN project has ins
 6. in ios/YourProject/AppDelegate.m add new import
    `#import <RCTVLCPlayer.h>`
 
-7. in XCode, select project folder > Framework folder > Right Click > Add Files to “Project Name..” > Select `MobileVLCKit.framework` > Select options (in Destination, select Copy item if needed, in Add to target, select “ProjectName” only)
+7. in XCode, select project folder > Framework folder > Right Click > Add Files to “Project Name..” > Select **MobileVLCKit.framework** > Select options (in Destination, select Copy item if needed, in Add to target, select “ProjectName” only)
    ![](./images/1.png) 
 
 8. in XCode, select project folder > Build Settings > Build Options 
@@ -62,9 +62,12 @@ Should work without any specific settings, but make sure your RN project has ins
 9. in XCode, select project folder > Build Settings > Search Path
 	- Library Search Path (Debug & release)
   add this:
-  `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios/RCTVLCPlayer/vlcKit`
-	`$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios`
-  `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios/RCTVLCPlayer/vlcKit/MobileVLCKit.framework`
+
+  - `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios/RCTVLCPlayer/vlcKit`
+
+	- `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios`
+
+  - `$(SRCROOT)/../node_modules/react-native-vlc-rtsp/ios/RCTVLCPlayer/vlcKit/MobileVLCKit.framework`
 
 
 ## How to Use

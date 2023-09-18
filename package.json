@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "rtsp",
+    "cctv",
+    "video-stream",
     "vlc",
     "player",
     "android",

@@ -108,8 +108,8 @@ export default class VlCPlayerViewByMethod extends Component {
             nextBtnText: 'Berikutnya'
         },
         errorViewText: {
-            errorText: 'Kesalahan pemutaran video',
-            reloadBtnText: 'Memutar ulang',
+            errorText: 'Periksa Koneksi Anda',
+            reloadBtnText: 'Memutar Ulang',
         },
         vipEndViewText: {
             vipEndText: 'Uji coba berakhir',
@@ -884,9 +884,11 @@ export default class VlCPlayerViewByMethod extends Component {
     };
 
     reloadError = () => {
+      if(Platform.OS == 'android'){
         this.firstPlaying = false;
         this.isReloadingError = true;
         this.startReload(false);
+      }
     }
 
     startReload = (isCurrent = false)=>{
