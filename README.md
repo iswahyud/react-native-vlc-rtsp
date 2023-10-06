@@ -162,5 +162,5 @@ Video coding formats: Cinepak, Dirac, DV, H.263, H.264/MPEG-4 AVC, H.265/MPEG HE
 
 ## author
 
-Iswahyudi - [[Google Developer Profile](https://g.dev/yudi)]
+[[Iswahyudi](https://g.dev/yudi)]
 

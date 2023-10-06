@@ -1,6 +1,6 @@
 /**
  * Created by yuanzhou.xu on 2018/5/16.
- * Modify by iswahyudi on 2023/9/18
+ * Modify by iswahyudi on 2023/10/06
  */
 import React, { Component } from 'react';
 import {
@@ -68,7 +68,7 @@ export default class ControlBtn extends Component {
                 style={{ width: 35, alignItems: 'center', justifyContent: 'center' }}>
                 <Icon name={paused ? 'play' : 'pause'} size={26} color="#fff" />
               </TouchableOpacity>
-              <TouchableOpacity
+              {/*<TouchableOpacity
                 activeOpacity={0.8}
                 onPress={() => {
                   onMutePress && onMutePress(!paused);
@@ -83,7 +83,7 @@ export default class ControlBtn extends Component {
                 }}
                   style={{ width: 35, alignItems: 'center', justifyContent: 'center' }}>
                   <Icon name={'reload'} size={24} color="#fff"/>
-                </TouchableOpacity>
+                </TouchableOpacity>*/}
               </View>
               {showSlider &&
                 totalTime > 0 && (
