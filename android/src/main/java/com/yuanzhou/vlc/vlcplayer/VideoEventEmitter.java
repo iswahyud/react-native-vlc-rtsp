@@ -1,6 +1,6 @@
 package com.yuanzhou.vlc.vlcplayer;
 
-import android.support.annotation.StringDef;
+//import android.support.annotation.StringDef;
 import android.util.Log;
 import android.view.View;
 
@@ -42,16 +42,16 @@ class VideoEventEmitter {
             EVENT_ON_VIDEO_STATE_CHANGE
     };
 
-    @Retention(RetentionPolicy.SOURCE)
-    @StringDef({
-            EVENT_LOAD_START,
-            EVENT_PROGRESS,
-            EVENT_SEEK,
-            EVENT_END,
-            EVENT_SNAPSHOT,
-            EVENT_ON_IS_PLAYING,
-            EVENT_ON_VIDEO_STATE_CHANGE
-    })
+    // @Retention(RetentionPolicy.SOURCE)
+    // @StringDef({
+    //         EVENT_LOAD_START,
+    //         EVENT_PROGRESS,
+    //         EVENT_SEEK,
+    //         EVENT_END,
+    //         EVENT_SNAPSHOT,
+    //         EVENT_ON_IS_PLAYING,
+    //         EVENT_ON_VIDEO_STATE_CHANGE
+    // })
 
     @interface VideoEvents {
     }
