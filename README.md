@@ -160,7 +160,5 @@ Video coding formats: Cinepak, Dirac, DV, H.263, H.264/MPEG-4 AVC, H.265/MPEG HE
 
 [xuyuanzhou](https://github.com/xuyuanzhou)
 
-## author
 
-[[Iswahyudi](https://g.dev/yudi)]
-
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/iswahyudi)
