@@ -12,6 +12,13 @@ def _targetSdkVersion = _ext.has('targetSdkVersion') ? _ext.targetSdkVersion : 2
 android {
     compileSdkVersion _compileSdkVersion
     buildToolsVersion _buildToolsVersion
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     defaultConfig {
         minSdkVersion _minSdkVersion
@@ -30,9 +37,17 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url "https://mvnrepository.com/artifact/org.videolan.android"
+    }
+    google()
+    jcenter()
+}
+
 dependencies {
-    provided fileTree(dir: 'libs', include: ['*.jar'])
-    provided "com.facebook.react:react-native:${_reactNativeVersion}"
-    compile 'com.yyl.vlc:vlc-android-sdk:3.0.13'
-    //compile 'de.mrmaffen:vlc-android-sdk:2.0.6'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.facebook.react:react-native:+"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'org.videolan.android:libvlc-all:3.6.0-eap9'
 }
