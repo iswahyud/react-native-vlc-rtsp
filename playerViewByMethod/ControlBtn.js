@@ -1,6 +1,5 @@
 /**
- * Created by yuanzhou.xu on 2018/5/16.
- * Modify by iswahyudi on 2023/10/06
+ * Modify by iswahyudi on 2025/05/13
  */
 import React, { Component } from 'react';
 import {
@@ -9,7 +8,7 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import Slider from 'react-native-slider';
+import Slider from '@react-native-community/slider';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class ControlBtn extends Component {
@@ -108,7 +107,6 @@ export default class ControlBtn extends Component {
                     <View style={styles.progress}>
                       <Slider
                         minimumTrackTintColor="#30a935"
-                        thumbStyle={styles.thumb}
                         style={{ width: '100%' }}
                         value={currentTime}
                         maximumValue={totalTime}

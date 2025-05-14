@@ -1,5 +1,4 @@
 /**
- * Created by yuanzhou.xu on 2018/5/14.
  * Modify by iswahyudi on 2023/9/18
  */
 import React, { Component } from 'react';

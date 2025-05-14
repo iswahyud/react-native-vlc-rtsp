@@ -5,11 +5,11 @@
 Library for Real-Time Video Stream RTSP in React Native.
 Now, support on Android and iOS.
 
-component for react-native project clone from `react-native-yz-vlcplayer` with modify script for iOS compatibility (also bahasa language).
+this component has modify script for iOS compatibility (also bahasa language).
 
 ## Supported RN Versions
 
-0.59 > 0.62 and up PODs are updated to works with 0.61 and up.(Tested in 0.61.5 and 0.62 and 0.63)
+0.74 and up
 
 ## Supported formats
 
@@ -33,7 +33,7 @@ Run
 
 
 ## Android
-Should work without any specific settings, but make sure your RN project has installed library `react-native-slider`.
+Should work without any specific settings, but make sure your RN project has installed library `@react-native-community/slider`.
 
 ## iOS Setup
 
@@ -68,26 +68,19 @@ Should work without any specific settings, but make sure your RN project has ins
 ## How to Use
 
 ```
-import { VLCPlayer, VlCPlayerView } from 'react-native-vlc-rtsp';
+import  { VlcSimplePlayer } from 'react-native-vlc-rtsp';
 
-    <VLCPlayer
-        style={[styles.video]}
-        videoAspectRatio="16:9"
-        source={{ uri: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4"}}
+    <VlcSimplePlayer
+        autoplay={true}
+        style={{width:'100%'}}
+        url={"your-rtsp-link-here"}
+        autoAspectRatio={false}
+        onStartFullScreen={()=>null}
+        onCloseFullScreen={()=>null}
     />
 
-or you can use
+    // Replace null with your function
 
-    <VlCPlayerView
-          autoplay={false}
-          url="https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4"
-          ggUrl=""
-          showGG={true}
-          showTitle={true}
-          title="Buck Bunny"
-          showBack={true}
-          onLeftPress={()=>{}}
-       />
 ```
 
 ### VLCPlayer Props
@@ -159,6 +152,3 @@ Video coding formats: Cinepak, Dirac, DV, H.263, H.264/MPEG-4 AVC, H.265/MPEG HE
 [iswahyud](https://github.com/iswahyud) 
 
 [xuyuanzhou](https://github.com/xuyuanzhou)
-
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/iswahyudi)

@@ -1,5 +1,4 @@
 /**
- * Created by yuanzhou.xu on 17/2/18.
  * Modify by iswahyudi on 2023/9/18
  */
 import { Dimensions, PixelRatio, Platform, StatusBar } from 'react-native';
