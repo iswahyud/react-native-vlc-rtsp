@@ -1,6 +1,6 @@
 {
   "name": "react-native-vlc-rtsp",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Library for Real-Time Video Stream RTSP in React Native. with new update: Support on Android and iOS (also bahasa version)",
   "main": "index.js",
   "scripts": {
