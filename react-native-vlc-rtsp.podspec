@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.authors      = package['author']
   s.platforms    = { :ios => "9.0", :osx => "10.13" }
   s.homepage     = 'https://github.com/iswahyud/react-native-vlc-rtsp.git'
-  s.summary      = 'A React Native library for VLC player integration.'
+  s.summary      = 'A React Native library for support Real-Time Stream video player'
   s.source       = { :git => "https://github.com/iswahyud/react-native-vlc-rtsp.git", :tag => "v#{s.version}" }
   s.source_files  = "ios/RCTVLCPlayer/*.{h,m}"
 
