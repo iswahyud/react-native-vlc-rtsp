@@ -75,6 +75,7 @@ export default class VlCPlayerViewByMethod extends Component {
         this.autoplaySize = 0;
         this.autoplayAdSize = 0;
         this.autoReloadLiveSize = 0;
+        this.disableControls = false;
     }
 
     static navigationOptions = {
@@ -1334,7 +1335,8 @@ export default class VlCPlayerViewByMethod extends Component {
             type,
             showAd,
             chapterElements,
-            chapterText
+            chapterText,
+            disableControls
         } = this.props;
         let {
             muted,
@@ -1402,65 +1404,67 @@ export default class VlCPlayerViewByMethod extends Component {
                 </View>
                 }
                 {this.getChapterView()}
-                <View style={[styles.bottomView,{}]}>
-                    <ControlBtn
-                        showSlider={!isAd}
-                        muted={muted}
-                        isFull={isFull}
-                        onMutePress={this.muteToggle}
-                        paused={paused}
-                        onReload={this.reloadCurrent}
-                        onPausedPress={this.pauseToggle}
-                        onFullPress={()=>{
-                            if(isFull){
-                                this._onCloseFullScreen();
-                            }else{
-                                this._toFullScreen();
-                            }
-                        }}
-                        currentTime={currentTime}
-                        totalTime={totalTime}
-                        onValueChange={value => {
-                            if (!this.changingSlider) {
-                                this.initialCurrentTime = currentTime;
-                            }
-                            this.changingSlider = true;
-                            this.setState({
-                                currentTime: value,
-                                changingSlider: true,
-                            });
-                        }}
-                        onSlidingComplete={value => {
-                            this.changingSlider = false;
-                            this.initialCurrentTime = 0;
-                            if (this.props.useVip) {
-                                if (value  >= this.props.vipPlayLength) {
-                                    this.pause();
-                                    this.setState({
-                                        isVipPlayEnd: true,
-                                    });
+                {!disableControls && (
+                    <View style={[styles.bottomView,{}]}>
+                        <ControlBtn
+                            showSlider={!isAd}
+                            muted={muted}
+                            isFull={isFull}
+                            onMutePress={this.muteToggle}
+                            paused={paused}
+                            onReload={this.reloadCurrent}
+                            onPausedPress={this.pauseToggle}
+                            onFullPress={()=>{
+                                if(isFull){
+                                    this._onCloseFullScreen();
+                                }else{
+                                    this._toFullScreen();
                                 }
-                            }else{
-                                if (Platform.OS === 'ios') {
-                                    if(value >= totalTime){
-                                        this.seek(0.99999999);
-                                    }else{
-                                        this.seek(Number((value / totalTime).toFixed(17)));
+                            }}
+                            currentTime={currentTime}
+                            totalTime={totalTime}
+                            onValueChange={value => {
+                                if (!this.changingSlider) {
+                                    this.initialCurrentTime = currentTime;
+                                }
+                                this.changingSlider = true;
+                                this.setState({
+                                    currentTime: value,
+                                    changingSlider: true,
+                                });
+                            }}
+                            onSlidingComplete={value => {
+                                this.changingSlider = false;
+                                this.initialCurrentTime = 0;
+                                if (this.props.useVip) {
+                                    if (value  >= this.props.vipPlayLength) {
+                                        this.pause();
+                                        this.setState({
+                                            isVipPlayEnd: true,
+                                        });
                                     }
-                                } else {
-                                    if(value >= totalTime){
-                                        this.seek(value-1);
-                                    }else{
-                                        this.seek(value);
+                                }else{
+                                    if (Platform.OS === 'ios') {
+                                        if(value >= totalTime){
+                                            this.seek(0.99999999);
+                                        }else{
+                                            this.seek(Number((value / totalTime).toFixed(17)));
+                                        }
+                                    } else {
+                                        if(value >= totalTime){
+                                            this.seek(value-1);
+                                        }else{
+                                            this.seek(value);
+                                        }
                                     }
                                 }
-                            }
-                            this.setState({
-                                showControls: false
-                            })
-                        }}
-                    />
-                </View>
+                                this.setState({
+                                    showControls: false
+                                })
+                            }}
+                        />
+                    </View>
+                )}
             </View>
         )
     }
@@ -1867,3 +1871,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
 });
+
